@@ -10,12 +10,12 @@ import (
 	"os"
 	"time"
 
-	"core/api/sharetoken"
-	"core/api/status"
-	"core/wlnet"
-	"core/wlnet/flushwriter"
-	"core/wlnet/h2rwc"
-	"core/wlnet/transport"
+	"github.com/M-ERCURY/core/api/sharetoken"
+	"github.com/M-ERCURY/core/api/status"
+	"github.com/M-ERCURY/core/wlnet"
+	"github.com/M-ERCURY/core/wlnet/flushwriter"
+	"github.com/M-ERCURY/core/wlnet/h2rwc"
+	"github.com/M-ERCURY/core/wlnet/transport"
 )
 
 type T struct {

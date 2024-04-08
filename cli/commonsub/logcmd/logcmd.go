@@ -7,8 +7,8 @@ import (
 	"log"
 	"os"
 
-	"core/cli"
-	"core/cli/fsdir"
+	"github.com/M-ERCURY/core/cli"
+	"github.com/M-ERCURY/core/cli/fsdir"
 )
 
 func Cmd(arg0 string) *cli.Subcmd {

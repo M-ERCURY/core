@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"core/api/signer"
+	"github.com/M-ERCURY/core/api/signer"
 )
 
 func TestServicekey(t *testing.T) {

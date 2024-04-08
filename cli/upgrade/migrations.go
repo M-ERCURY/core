@@ -3,7 +3,7 @@ package upgrade
 import (
 	"fmt"
 
-	"core/cli/fsdir"
+	"github.com/M-ERCURY/core/cli/fsdir"
 
 	"github.com/blang/semver"
 )

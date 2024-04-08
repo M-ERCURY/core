@@ -1,6 +1,6 @@
 package relaylist
 
-import "core/api/relayentry"
+import "github.com/M-ERCURY/core/api/relayentry"
 
 type T map[string]*relayentry.T
 

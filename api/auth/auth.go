@@ -9,7 +9,7 @@ import (
 	"net/http"
 	"strings"
 
-	"core/api/jsonb"
+	"github.com/M-ERCURY/core/api/jsonb"
 
 	"github.com/blang/semver"
 )

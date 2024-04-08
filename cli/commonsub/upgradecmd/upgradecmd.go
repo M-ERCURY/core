@@ -6,9 +6,9 @@ import (
 	"log"
 	"os"
 
-	"core/cli"
-	"core/cli/fsdir"
-	"core/cli/upgrade"
+	"github.com/M-ERCURY/core/cli"
+	"github.com/M-ERCURY/core/cli/fsdir"
+	"github.com/M-ERCURY/core/cli/upgrade"
 
 	"github.com/blang/semver"
 )

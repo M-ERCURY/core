@@ -9,8 +9,8 @@ import (
 	"strings"
 	"sync"
 
-	"core/api/sharetoken"
-	"core/cli/fsdir"
+	"github.com/M-ERCURY/core/api/sharetoken"
+	"github.com/M-ERCURY/core/cli/fsdir"
 )
 
 type (

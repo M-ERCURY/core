@@ -7,10 +7,10 @@ import (
 	"os"
 	"syscall"
 
-	"core/cli"
-	"core/cli/commonsub/commonlib"
-	"core/cli/fsdir"
-	"core/cli/upgrade"
+	"github.com/M-ERCURY/core/cli"
+	"github.com/M-ERCURY/core/cli/commonsub/commonlib"
+	"github.com/M-ERCURY/core/cli/fsdir"
+	"github.com/M-ERCURY/core/cli/upgrade"
 
 	"github.com/blang/semver"
 )

@@ -7,7 +7,7 @@ import (
 	"os"
 	"text/tabwriter"
 
-	"core/cli/fsdir"
+	"github.com/M-ERCURY/core/cli/fsdir"
 )
 
 type Subcmd struct {

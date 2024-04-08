@@ -9,8 +9,8 @@ import (
 	"testing"
 	"time"
 
-	"core/api/servicekey"
-	"core/api/sharetoken"
+	"github.com/M-ERCURY/core/api/servicekey"
+	"github.com/M-ERCURY/core/api/sharetoken"
 )
 
 func Test(t *testing.T) {

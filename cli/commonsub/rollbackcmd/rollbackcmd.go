@@ -6,9 +6,9 @@ import (
 	"os"
 	"os/exec"
 
-	"core/cli"
-	"core/cli/commonsub/commonlib"
-	"core/cli/fsdir"
+	"github.com/M-ERCURY/core/cli"
+	"github.com/M-ERCURY/core/cli/commonsub/commonlib"
+	"github.com/M-ERCURY/core/cli/fsdir"
 )
 
 func Cmd(ctx commonlib.Context) *cli.Subcmd {

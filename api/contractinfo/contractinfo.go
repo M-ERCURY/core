@@ -3,9 +3,9 @@ package contractinfo
 import (
 	"math/big"
 
-	"core/api/duration"
-	"core/api/jsonb"
-	"core/api/texturl"
+	"github.com/M-ERCURY/core/api/duration"
+	"github.com/M-ERCURY/core/api/jsonb"
+	"github.com/M-ERCURY/core/api/texturl"
 
 	"github.com/blang/semver"
 )

@@ -11,8 +11,8 @@ import (
 	"text/tabwriter"
 	"time"
 
-	"core/cli"
-	"core/cli/fsdir"
+	"github.com/M-ERCURY/core/cli"
+	"github.com/M-ERCURY/core/cli/fsdir"
 )
 
 func Cmd(arg0 string, do func(fsdir.T)) *cli.Subcmd {

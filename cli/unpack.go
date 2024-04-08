@@ -9,7 +9,7 @@ import (
 	"path"
 	"strings"
 
-	"core/cli/fsdir"
+	"github.com/M-ERCURY/core/cli/fsdir"
 )
 
 // Unpack go v1.16 embedded FS contents to disk.

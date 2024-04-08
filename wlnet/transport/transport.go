@@ -8,7 +8,7 @@ import (
 	"net/url"
 	"time"
 
-	"core/wlnet/h2conn"
+	"github.com/M-ERCURY/core/wlnet/h2conn"
 )
 
 // T is a complete Mercury network transport which can dial to other

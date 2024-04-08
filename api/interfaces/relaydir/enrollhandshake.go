@@ -7,9 +7,9 @@ import (
 	"strconv"
 	"strings"
 
-	"core/api/auth"
-	"core/api/client"
-	"core/api/status"
+	"github.com/M-ERCURY/core/api/auth"
+	"github.com/M-ERCURY/core/api/client"
+	"github.com/M-ERCURY/core/api/status"
 
 	"golang.org/x/crypto/bcrypt"
 )

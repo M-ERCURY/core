@@ -1,6 +1,6 @@
 package ststore
 
-import "core/api/sharetoken"
+import "github.com/M-ERCURY/core/api/sharetoken"
 
 // KeyFunc is the type of key derivation functions for this sharetoken store.
 // On taking a sharetoken as argument it should produce keys of 1st, 2nd and

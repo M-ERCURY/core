@@ -6,9 +6,9 @@ import (
 	"strings"
 	"time"
 
-	"core/api/jsonb"
-	"core/api/nonce"
-	"core/api/signer"
+	"github.com/M-ERCURY/core/api/jsonb"
+	"github.com/M-ERCURY/core/api/nonce"
+	"github.com/M-ERCURY/core/api/signer"
 )
 
 type T struct {

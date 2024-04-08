@@ -7,7 +7,7 @@ import (
 	"net"
 	"time"
 
-	"core/api/status"
+	"github.com/M-ERCURY/core/api/status"
 )
 
 // retransmit(src, dst, ec, bufsize) reads from src and writes to dst using a

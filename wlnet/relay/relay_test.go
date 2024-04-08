@@ -7,12 +7,12 @@ import (
 	"testing"
 	"time"
 
-	"core/api/servicekey"
-	"core/api/sharetoken"
-	"core/api/signer"
-	"core/api/texturl"
-	"core/wlnet"
-	"core/wlnet/transport"
+	"github.com/M-ERCURY/core/api/servicekey"
+	"github.com/M-ERCURY/core/api/sharetoken"
+	"github.com/M-ERCURY/core/api/signer"
+	"github.com/M-ERCURY/core/api/texturl"
+	"github.com/M-ERCURY/core/wlnet"
+	"github.com/M-ERCURY/core/wlnet/transport"
 )
 
 func TestSMRelay(t *testing.T) {

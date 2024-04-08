@@ -5,9 +5,9 @@ import (
 	"testing"
 	"time"
 
-	"core/api/jsonb"
-	"core/api/servicekey"
-	"core/api/signer"
+	"github.com/M-ERCURY/core/api/jsonb"
+	"github.com/M-ERCURY/core/api/servicekey"
+	"github.com/M-ERCURY/core/api/signer"
 )
 
 func TestVerify(t *testing.T) {

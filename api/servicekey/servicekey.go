@@ -6,8 +6,8 @@ import (
 	"strconv"
 	"strings"
 
-	"core/api/jsonb"
-	"core/api/signer"
+	"github.com/M-ERCURY/core/api/jsonb"
+	"github.com/M-ERCURY/core/api/signer"
 )
 
 // T is the struct holding the servicekey data.

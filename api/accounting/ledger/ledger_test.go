@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"core/api/accounting/transaction"
+	"github.com/M-ERCURY/core/api/accounting/transaction"
 )
 
 func TestWriteTransaction(t *testing.T) {

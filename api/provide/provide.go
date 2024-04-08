@@ -9,10 +9,10 @@ import (
 	"sync"
 	"time"
 
-	"core/api/apiversion"
-	"core/api/auth"
-	"core/api/canned"
-	"core/api/status"
+	"github.com/M-ERCURY/core/api/apiversion"
+	"github.com/M-ERCURY/core/api/auth"
+	"github.com/M-ERCURY/core/api/canned"
+	"github.com/M-ERCURY/core/api/status"
 
 	"github.com/blang/semver"
 )

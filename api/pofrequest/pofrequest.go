@@ -3,7 +3,7 @@ package pofrequest
 import (
 	"fmt"
 
-	"core/api/accounting"
+	"github.com/M-ERCURY/core/api/accounting"
 )
 
 type T struct {

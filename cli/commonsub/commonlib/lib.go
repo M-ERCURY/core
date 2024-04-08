@@ -1,7 +1,7 @@
 package commonlib
 
 import (
-	"core/cli/fsdir"
+	"github.com/M-ERCURY/core/cli/fsdir"
 
 	"github.com/blang/semver"
 )

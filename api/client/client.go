@@ -15,11 +15,11 @@ import (
 	"strings"
 	"time"
 
-	"core/api/apiversion"
-	"core/api/auth"
-	"core/api/nonce"
-	"core/api/signer"
-	"core/api/status"
+	"github.com/M-ERCURY/core/api/apiversion"
+	"github.com/M-ERCURY/core/api/auth"
+	"github.com/M-ERCURY/core/api/nonce"
+	"github.com/M-ERCURY/core/api/signer"
+	"github.com/M-ERCURY/core/api/status"
 )
 
 // Client is an API client type. It exposes the http.Client interface and it is

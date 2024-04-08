@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"io/ioutil"
 
-	"core/api/jsonb"
-	"core/cli/fsdir"
+	"github.com/M-ERCURY/core/api/jsonb"
+	"github.com/M-ERCURY/core/cli/fsdir"
 )
 
 func LoadKey(fm fsdir.T, p ...string) (key ed25519.PrivateKey, err error) {

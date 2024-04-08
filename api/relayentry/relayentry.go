@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
-	"core/api/jsonb"
-	"core/api/texturl"
+	"github.com/M-ERCURY/core/api/jsonb"
+	"github.com/M-ERCURY/core/api/texturl"
 
 	"github.com/blang/semver"
 )

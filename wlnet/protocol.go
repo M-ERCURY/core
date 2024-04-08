@@ -8,9 +8,9 @@ import (
 	"io"
 	"net"
 
-	"core/api/sharetoken"
-	"core/api/status"
-	"core/api/texturl"
+	"github.com/M-ERCURY/core/api/sharetoken"
+	"github.com/M-ERCURY/core/api/status"
+	"github.com/M-ERCURY/core/api/texturl"
 
 	"github.com/blang/semver"
 )

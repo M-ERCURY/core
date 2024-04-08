@@ -5,9 +5,9 @@ import (
 	"flag"
 	"log"
 
-	"core/api/jsonb"
-	"core/cli"
-	"core/cli/fsdir"
+	"github.com/M-ERCURY/core/api/jsonb"
+	"github.com/M-ERCURY/core/cli"
+	"github.com/M-ERCURY/core/cli/fsdir"
 )
 
 const (

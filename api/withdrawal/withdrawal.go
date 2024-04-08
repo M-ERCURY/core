@@ -5,7 +5,7 @@ import (
 	"errors"
 	"fmt"
 
-	"core/api/withdrawalrequest"
+	"github.com/M-ERCURY/core/api/withdrawalrequest"
 )
 
 // field rename

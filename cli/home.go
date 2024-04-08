@@ -6,7 +6,7 @@ import (
 	"path"
 	"path/filepath"
 
-	"core/cli/fsdir"
+	"github.com/M-ERCURY/core/cli/fsdir"
 )
 
 // Home returns the fsdir of the home directory of this component.

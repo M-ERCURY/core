@@ -8,9 +8,9 @@ import (
 	"strings"
 	"time"
 
-	"core/api/jsonb"
-	"core/api/nonce"
-	"core/api/servicekey"
+	"github.com/M-ERCURY/core/api/jsonb"
+	"github.com/M-ERCURY/core/api/nonce"
+	"github.com/M-ERCURY/core/api/servicekey"
 )
 
 // T is the struct holding the sharetoken data.

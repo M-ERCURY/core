@@ -5,12 +5,12 @@ import (
 	"fmt"
 	"net/http"
 
-	"core/api/auth"
-	"core/api/client"
-	"core/api/contractinfo"
-	"core/api/dirinfo"
-	"core/api/relaylist"
-	"core/api/texturl"
+	"github.com/M-ERCURY/core/api/auth"
+	"github.com/M-ERCURY/core/api/client"
+	"github.com/M-ERCURY/core/api/contractinfo"
+	"github.com/M-ERCURY/core/api/dirinfo"
+	"github.com/M-ERCURY/core/api/relaylist"
+	"github.com/M-ERCURY/core/api/texturl"
 )
 
 func ContractInfo(cl *client.Client, sc *texturl.URL) (info *contractinfo.T, err error) {
