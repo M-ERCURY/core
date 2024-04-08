@@ -11,8 +11,8 @@ import (
 	"github.com/M-ERCURY/core/api/sharetoken"
 	"github.com/M-ERCURY/core/api/signer"
 	"github.com/M-ERCURY/core/api/texturl"
-	"github.com/M-ERCURY/core/wlnet"
-	"github.com/M-ERCURY/core/wlnet/transport"
+	"github.com/M-ERCURY/core/mrnet"
+	"github.com/M-ERCURY/core/mrnet/transport"
 )
 
 func TestSMRelay(t *testing.T) {
@@ -45,12 +45,12 @@ func TestSMRelay(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	init := &wlnet.Init{
+	init := &mrnet.Init{
 		Command:  "CONNECT",
 		Protocol: "tcp",
 		Remote:   texturl.URLMustParse("target://localhost:8888"),
 		Token:    st,
-		Version:  &wlnet.PROTO_VERSION,
+		Version:  &mrnet.PROTO_VERSION,
 	}
 	p0 := []byte{'h', 'e', 'l', 'l', 'o', '!', '\r', '\n'}
 	c1, c2 := net.Pipe()
@@ -93,7 +93,7 @@ func TestSMRelay(t *testing.T) {
 		t.Fatal(err)
 	}
 	con.Close()
-	c1 = &wlnet.FragReadConn{Conn: c1}
+	c1 = &mrnet.FragReadConn{Conn: c1}
 	p2 := make([]byte, 32)
 	n, err = c1.Read(p2)
 	if err != nil {

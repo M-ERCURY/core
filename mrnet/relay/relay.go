@@ -12,10 +12,10 @@ import (
 
 	"github.com/M-ERCURY/core/api/sharetoken"
 	"github.com/M-ERCURY/core/api/status"
-	"github.com/M-ERCURY/core/wlnet"
-	"github.com/M-ERCURY/core/wlnet/flushwriter"
-	"github.com/M-ERCURY/core/wlnet/h2rwc"
-	"github.com/M-ERCURY/core/wlnet/transport"
+	"github.com/M-ERCURY/core/mrnet"
+	"github.com/M-ERCURY/core/mrnet/flushwriter"
+	"github.com/M-ERCURY/core/mrnet/h2rwc"
+	"github.com/M-ERCURY/core/mrnet/transport"
 )
 
 type T struct {
@@ -62,10 +62,10 @@ func (t *T) ServeTLS(c io.ReadWriteCloser) {
 	defer c.Close()
 
 	origin := t.ErrorOrigin
-	p, err := wlnet.ReadInit(c)
+	p, err := mrnet.ReadInit(c)
 
 	if err != nil {
-		wlnet.WriteStatus(c, &status.T{
+		mrnet.WriteStatus(c, &status.T{
 			Code:   http.StatusBadRequest,
 			Desc:   err.Error(),
 			Origin: origin,
@@ -74,7 +74,7 @@ func (t *T) ServeTLS(c io.ReadWriteCloser) {
 	}
 
 	if p.Command == "PING" {
-		// raw, not in wlnet wire format
+		// raw, not in mrnet wire format
 		(&status.T{
 			Code:   http.StatusOK,
 			Desc:   "PONG",
@@ -87,7 +87,7 @@ func (t *T) ServeTLS(c io.ReadWriteCloser) {
 		err = t.HandleST(p.Token)
 
 		if err != nil {
-			wlnet.WriteStatus(c, &status.T{
+			mrnet.WriteStatus(c, &status.T{
 				Code:   http.StatusBadRequest,
 				Desc:   err.Error(),
 				Origin: origin,
@@ -104,7 +104,7 @@ func (t *T) ServeTLS(c io.ReadWriteCloser) {
 
 	// no dials to localhost (this relay's host)
 	if !t.AllowLoopback && isLoopback(p.Remote.Hostname()) {
-		wlnet.WriteStatus(c, &status.T{
+		mrnet.WriteStatus(c, &status.T{
 			Code: http.StatusBadRequest,
 			Desc: fmt.Sprintf(
 				"loopback address '%s' requested, refusing to dial",
@@ -130,13 +130,13 @@ func (t *T) ServeTLS(c io.ReadWriteCloser) {
 		// TODO more granular errors
 
 		if os.IsTimeout(err) {
-			wlnet.WriteStatus(c, &status.T{
+			mrnet.WriteStatus(c, &status.T{
 				Code:   http.StatusRequestTimeout,
 				Desc:   err.Error(),
 				Origin: origin,
 			})
 		} else {
-			wlnet.WriteStatus(c, &status.T{
+			mrnet.WriteStatus(c, &status.T{
 				Code:   http.StatusBadGateway,
 				Desc:   err.Error(),
 				Origin: origin,
@@ -147,22 +147,22 @@ func (t *T) ServeTLS(c io.ReadWriteCloser) {
 	}
 
 	if p.Remote.Scheme == "target" {
-		c = wlnet.FragWriteCloser{ReadWriteCloser: c}
+		c = mrnet.FragWriteCloser{ReadWriteCloser: c}
 	}
 
-	err = wlnet.Splice(c, c2, t.MaxTime, t.BufSize)
+	err = mrnet.Splice(c, c2, t.MaxTime, t.BufSize)
 
 	if err != nil {
 		// TODO more granular errors
 
 		if os.IsTimeout(err) {
-			wlnet.WriteStatus(c, &status.T{
+			mrnet.WriteStatus(c, &status.T{
 				Code:   http.StatusRequestTimeout,
 				Desc:   err.Error(),
 				Origin: origin,
 			})
 		} else {
-			wlnet.WriteStatus(c, &status.T{
+			mrnet.WriteStatus(c, &status.T{
 				Code:   http.StatusGone,
 				Desc:   err.Error(),
 				Origin: origin,

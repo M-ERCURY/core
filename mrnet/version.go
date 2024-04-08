@@ -1,4 +1,4 @@
-package wlnet
+package mrnet
 
 import (
 	"fmt"

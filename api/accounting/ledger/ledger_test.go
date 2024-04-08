@@ -10,7 +10,7 @@ import (
 )
 
 func TestWriteTransaction(t *testing.T) {
-	tmpd, err := ioutil.TempDir("", "wltest.*")
+	tmpd, err := ioutil.TempDir("", "mrtest.*")
 
 	if err != nil {
 		t.Fatal(err)
