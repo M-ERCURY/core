@@ -1,6 +1,6 @@
 module github.com/M-ERCURY/core
 
-go 1.21.3
+go 1.16
 
 require (
 	github.com/blang/semver v3.5.1+incompatible
